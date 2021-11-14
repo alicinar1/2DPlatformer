@@ -5,6 +5,7 @@ using UnityEngine;
 public class MovementController : MonoBehaviour
 {
     [SerializeField] private LayerMask jumpableGround;
+    [SerializeField] private LayerMask[] ground = new LayerMask[2];
     [SerializeField] private InputController inputController;
     [SerializeField] private SpringJointController springJointController;
     
@@ -12,11 +13,8 @@ public class MovementController : MonoBehaviour
     private Rigidbody2D playerRigidBody;
 
     private BoxCollider2D boxCollider;
-    private bool facingRight = true;
+    private bool isFacingRight = true;
 
-    private float jumpMultiplier;
-    private float speedMultiplier;
-    private float maxSpeed;
     private float highGravity;
     private float lowGravity;
     private bool isConnected;
@@ -32,22 +30,26 @@ public class MovementController : MonoBehaviour
     {
         playerRigidBody = Player.Instance.GetComponent<Rigidbody2D>();
         boxCollider = Player.Instance.GetComponent<BoxCollider2D>();
-        jumpMultiplier = Player.Instance.JumpMultiplier;
-        speedMultiplier = Player.Instance.SpeedMultiplier;
-        maxSpeed = Player.Instance.MaxSpeed;
         highGravity = Player.Instance.HighGravity;
         lowGravity = Player.Instance.LowGravity;
     }
-
-
 
     private void Update()
     {
         CheckJumpable();
         IsFalling();
         ManipulateDrag();
-        BreakJointOnGround();
+        IsMovingToRight();
         CheckConditions();
+        BreakJointOnGround();
+    }
+
+    private void BreakJointOnGround()
+    {
+        if (isJumpable)
+        {
+            springJointController.BreakConnection();
+        }        
     }
 
     private void CheckConditions()
@@ -55,60 +57,7 @@ public class MovementController : MonoBehaviour
         isConnected = Player.Instance.IsConnected;
         isJumpable = Player.Instance.IsJumpable;
         isFalling = Player.Instance.IsFalling;
-    }
-
-    public void MoveRight()
-    {
-        facingRight = true;
-
-        if (!isConnected)
-        {
-            playerRigidBody.AddForce(Vector2.right * speedMultiplier * Time.deltaTime, ForceMode2D.Force);
-            if (playerRigidBody.velocity.x > maxSpeed)
-            {
-                playerRigidBody.velocity = new Vector2(maxSpeed, playerRigidBody.velocity.y);
-            }
-            Flip();
-            Debug.Log("Right");
-        }
-        else
-        {
-            return;
-        }
-
-    }
-    public void MoveLeft()
-    {
-        facingRight = false;
-
-        if (!isConnected)
-        {
-            playerRigidBody.AddForce(Vector2.left * speedMultiplier * Time.deltaTime, ForceMode2D.Force);
-            if (playerRigidBody.velocity.x < -maxSpeed)
-            {
-                playerRigidBody.velocity = new Vector2(-maxSpeed, playerRigidBody.velocity.y);
-
-            }
-            Flip();
-            Debug.Log("Left");
-        }
-        else
-        {
-            return;
-        }
-    }
-
-    public void Jump()
-    {
-        if (isJumpable)
-        {
-            playerRigidBody.AddForce(Vector2.up * jumpMultiplier, ForceMode2D.Impulse);
-            Debug.Log("Jump");
-        }
-        else
-        {
-            return;
-        }
+        isFacingRight = Player.Instance.IsFacingRight;
     }
 
     private void CheckJumpable()
@@ -118,7 +67,7 @@ public class MovementController : MonoBehaviour
 
     private void Flip()
     {
-        if (facingRight)
+        if (isFacingRight)
         {
             Player.Instance.gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
@@ -139,23 +88,29 @@ public class MovementController : MonoBehaviour
         {
             Player.Instance.IsFalling = false;
         }
-        ManipulateGravity();
+        CheckFalling();
     }
 
-    private void ManipulateGravity()
+    private void CheckFalling()
     {
         if (isFalling && !isConnected)
         {
-            playerRigidBody.gravityScale = highGravity;
-        }
-        else if (!isFalling && !isConnected)
-        {
-            playerRigidBody.gravityScale = lowGravity;
+            SetGravityToHigh();
         }
         else
         {
-            playerRigidBody.gravityScale = lowGravity;
+            SetGravityToLow();
         }
+    }
+
+    public void SetGravityToHigh()
+    {      
+        playerRigidBody.gravityScale = highGravity;
+    }
+
+    public void SetGravityToLow()
+    {
+        playerRigidBody.gravityScale = lowGravity;
     }
 
     private void ManipulateDrag()
@@ -174,7 +129,7 @@ public class MovementController : MonoBehaviour
 
     public void BoostSwing(GameObject player)
     {
-        if (IsMovingToRight())
+        if (isFacingRight)
         {
             playerRigidBody.velocity += new Vector2(5, 0);
         }
@@ -185,25 +140,73 @@ public class MovementController : MonoBehaviour
 
     }
 
-    private bool IsMovingToRight()
+    private void IsMovingToRight()
     {
         if (playerRigidBody.velocity.x > 0)
         {
-            return true;
+            Player.Instance.IsFacingRight = true;
         }
         else
         {
-            return false;
+            Player.Instance.IsFacingRight = false;
         }
 
-    }
-
-
-    private void BreakJointOnGround()
-    {
-        if (isJumpable)
-        {
-            springJointController.BreakConnection(Player.Instance.gameObject);
-        }
     }
 }
+
+
+//Old movement scripts
+//public void MoveRight()
+//{
+//    isFacingRight = true;
+
+//    if (!isConnected)
+//    {
+//        playerRigidBody.AddForce(Vector2.right * speedMultiplier * Time.deltaTime, ForceMode2D.Force);
+//        if (playerRigidBody.velocity.x > maxSpeed)
+//        {
+//            playerRigidBody.velocity = new Vector2(maxSpeed, playerRigidBody.velocity.y);
+//        }
+//        Flip();
+//        Debug.Log("Right");
+//    }
+//    else
+//    {
+//        return;
+//    }
+
+//}
+
+//public void MoveLeft()
+//{
+//    isFacingRight = false;
+
+//    if (!isConnected)
+//    {
+//        playerRigidBody.AddForce(Vector2.left * speedMultiplier * Time.deltaTime, ForceMode2D.Force);
+//        if (playerRigidBody.velocity.x < -maxSpeed)
+//        {
+//            playerRigidBody.velocity = new Vector2(-maxSpeed, playerRigidBody.velocity.y);
+
+//        }
+//        Flip();
+//        Debug.Log("Left");
+//    }
+//    else
+//    {
+//        return;
+//    }
+//}
+
+//public void Jump()
+//{
+//    if (isJumpable)
+//    {
+//        playerRigidBody.AddForce(Vector2.up * jumpMultiplier, ForceMode2D.Impulse);
+//        Debug.Log("Jump");
+//    }
+//    else
+//    {
+//        return;
+//    }
+//}

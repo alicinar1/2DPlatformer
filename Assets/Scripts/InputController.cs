@@ -7,6 +7,14 @@ public class InputController : MonoBehaviour
     [Header("Externals")]
     [SerializeField] private SpringJointController springJoint;
     [SerializeField] private MovementController movementController;
+    ICommand rightArrow, leftArrow, upArrow;
+
+    private void Start()
+    {
+        rightArrow = new MoveRight();
+        leftArrow = new MoveLeft();
+        upArrow = new Jump();
+    }
 
     private void Update()
     {
@@ -17,27 +25,27 @@ public class InputController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            movementController.MoveRight();
+            rightArrow.Execute();
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
-            movementController.MoveLeft();
+            leftArrow.Execute();
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            movementController.Jump();
+            upArrow.Execute();
         }
 
         if (Input.GetKeyDown("space"))
         {
             if (!Player.Instance.IsConnected)
             {
-                springJoint.SetConnectedRigidBody(Player.Instance.gameObject);
+                springJoint.SetConnectedRigidBody();
             }
             else if (Player.Instance.IsConnected)
             {
-                springJoint.BreakConnection(Player.Instance.gameObject);
+                springJoint.BreakConnection();
             }
         }
 
