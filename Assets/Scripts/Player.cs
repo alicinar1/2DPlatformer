@@ -16,6 +16,7 @@ public class Player : MonoSingleton<Player>
     [SerializeField] private bool isFalling;
     [SerializeField] private bool isJumpable;
     [SerializeField] private bool isOnGround;
+    [SerializeField] private bool isFacingRight;
 
     public float PlayerHealth
     {
@@ -112,9 +113,18 @@ public class Player : MonoSingleton<Player>
             isOnGround = value;
         }
     }
+    public bool IsFacingRight
+    {
+        get
+        {
+            return isFacingRight;
+        }
 
-
-
+        set
+        {
+            isFacingRight = value;
+        }
+    }
 
     private void Start()
     {

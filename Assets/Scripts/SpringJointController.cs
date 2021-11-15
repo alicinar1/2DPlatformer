@@ -4,71 +4,31 @@ using UnityEngine;
 
 public class SpringJointController : MonoBehaviour
 {
-    [SerializeField] private Player player;
-    private void Update()
-    {
-        LowLightOtherLinks();
-    }
+    [SerializeField] private LinkController linkController;
+    //private SpringJoint2D springJoint = new SpringJoint2D();
 
-    public void SetConnectedRigidBody(GameObject gameObject)
+    //private void Start()
+    //{
+    //    SpringJoint2D springJoint = Player.Instance.GetComponent<SpringJoint2D>();
+    //    springJoint.enabled = true;
+    //}
+    public void SetConnectedRigidBody()
     {
-        SpringJoint2D springJoint = gameObject.GetComponent<SpringJoint2D>();
+        SpringJoint2D springJoint = Player.Instance.GetComponent<SpringJoint2D>();
         springJoint.enabled = true;
-        springJoint.connectedBody = GetClosestLink().GetComponent<Rigidbody2D>();
-        player.IsConnected = true;
+        springJoint.connectedBody = linkController.GetClosestLink().GetComponent<Rigidbody2D>();
+        //Player.Instance.GetComponent<SpringJoint2D>().connectedBody = springJoint.connectedBody;
+        Player.Instance.IsConnected = true;
         Debug.Log("Setted");
     }
 
-    public void BreakConnection(GameObject gameObject)
+    public void BreakConnection()
     {
-        SpringJoint2D springJoint = gameObject.GetComponent<SpringJoint2D>();
+        SpringJoint2D springJoint = Player.Instance.GetComponent<SpringJoint2D>();
         springJoint.enabled = false;
         springJoint.connectedBody = null;
-        player.IsConnected = false;
+        Player.Instance.IsConnected = false;
+        //Player.Instance.GetComponent<SpringJoint2D>().connectedBody = springJoint.connectedBody;
         Debug.Log("Breaked");
-    }
-
-    private Link GetClosestLink()
-    {
-        float distanceOfClosestLink = float.MaxValue;
-        Link closestLink = null;
-
-        foreach (Link currentLink in FindAllLinks())
-        {
-            float linkDistance = (currentLink.transform.position - player.gameObject.transform.position).sqrMagnitude;
-            if (linkDistance < distanceOfClosestLink)
-            {
-                distanceOfClosestLink = linkDistance;
-                closestLink = currentLink;
-            }
-        }
-
-        return closestLink;
-    }
-
-    private Link[] FindAllLinks()
-    {
-        Link[] allLinks = GameObject.FindObjectsOfType<Link>();
-
-        return allLinks;
-    }
-
-    private void HighlightClosestLink(Link closestLink)
-    {
-        Color highlightedColor = closestLink.GetComponent<SpriteRenderer>().color;
-        highlightedColor.a = 1;
-        closestLink.GetComponent<SpriteRenderer>().color = highlightedColor;
-    }
-
-    private void LowLightOtherLinks()
-    {
-        foreach (Link link in FindAllLinks())
-        {
-            Color highlightedColor = link.GetComponent<SpriteRenderer>().color;
-            highlightedColor.a = 0.5f;
-            link.GetComponent<SpriteRenderer>().color = highlightedColor;
-        }
-
-        HighlightClosestLink(GetClosestLink());
     }
 }
