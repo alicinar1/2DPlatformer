@@ -41,7 +41,7 @@ public class InputController : MonoBehaviour
         {
             if (!Player.Instance.IsConnected)
             {
-                springJoint.SetConnectedRigidBody();
+                springJoint.SetConnectedRigidBody();                
             }
             else if (Player.Instance.IsConnected)
             {

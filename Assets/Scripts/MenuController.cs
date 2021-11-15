@@ -18,7 +18,7 @@ public class MenuController : MonoBehaviour
 
     public void LoadHowToPlay() 
     {
-        SceneManager.LoadScene("HowToPlayScene");    
+        SceneManager.LoadScene("Instructions");    
     }
 
     public void LoadMenu()

@@ -16,7 +16,7 @@ MonoBehaviour:
   nameOfPlayer: Player
   health: 100
   speedMultiplier: 1100
-  jumpMultiplier: 5
+  jumpMultiplier: 6
   highGravity: 3
   lowGravity: 1
-  maxSpeed: 10
+  maxSpeed: 12

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class LinkController : MonoBehaviour
 {
+    [SerializeField] private Sprite greenSprite;
+    [SerializeField] private Sprite redSprite;
+
     private Link[] allLinks;
 
     private void Start()
@@ -56,5 +59,17 @@ public class LinkController : MonoBehaviour
         }
 
         HighlightClosestLink(GetClosestLink());
+    }
+
+    public void ChangeLinkColor()
+    {
+        if (Player.Instance.IsConnected)
+        {
+            GetClosestLink().GetComponent<SpriteRenderer>().sprite = redSprite;
+        }
+        else
+        {
+            GetClosestLink().GetComponent<SpriteRenderer>().sprite = greenSprite;
+        }
     }
 }

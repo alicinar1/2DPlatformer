@@ -19,6 +19,7 @@ public class SpringJointController : MonoBehaviour
         springJoint.connectedBody = linkController.GetClosestLink().GetComponent<Rigidbody2D>();
         //Player.Instance.GetComponent<SpringJoint2D>().connectedBody = springJoint.connectedBody;
         Player.Instance.IsConnected = true;
+        linkController.ChangeLinkColor();
         Debug.Log("Setted");
     }
 
@@ -29,6 +30,7 @@ public class SpringJointController : MonoBehaviour
         springJoint.connectedBody = null;
         Player.Instance.IsConnected = false;
         //Player.Instance.GetComponent<SpringJoint2D>().connectedBody = springJoint.connectedBody;
+        linkController.ChangeLinkColor();
         Debug.Log("Breaked");
     }
 }
