@@ -5,5 +5,6 @@ using UnityEngine;
 public interface ICommand
 {
     public void Execute();
+    //public void StartAnimation(Animator animator);
 }
 

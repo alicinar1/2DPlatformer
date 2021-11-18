@@ -20,7 +20,7 @@ public class Player : MonoSingleton<Player>
     [SerializeField] private bool isFalling;
     [SerializeField] private bool isJumpable;
     [SerializeField] private bool isOnGround;
-    [SerializeField] private bool isFacingRight;
+    [SerializeField] private bool isFacingRight = true;
     #endregion
 
     #region Events
@@ -132,7 +132,7 @@ public class Player : MonoSingleton<Player>
             isOnGround = value;
         }
     }
-    public bool IsFacingRight
+    public bool IsFacingRight 
     {
         get
         {

@@ -22,6 +22,7 @@ public class MoveRight : ICommand
         if (!Player.Instance.IsFacingRight)
         {
             Player.Instance.IsFacingRight = true;
+            Player.Instance.GetComponent<Rigidbody2D>().velocity = new Vector2(0.1f, Player.Instance.GetComponent<Rigidbody2D>().velocity.y); 
             MovementController.Instance.Flip();
         }
     }
@@ -50,6 +51,7 @@ public class MoveLeft : ICommand
         if (Player.Instance.IsFacingRight)
         {
             Player.Instance.IsFacingRight = false;
+            Player.Instance.GetComponent<Rigidbody2D>().velocity = new Vector2(-0.1f, Player.Instance.GetComponent<Rigidbody2D>().velocity.y);
             MovementController.Instance.Flip();
         }
     }
@@ -71,4 +73,5 @@ public class Jump : ICommand
         }
     }
 }
-#endregion
+
+    #endregion
