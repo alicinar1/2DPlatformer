@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LinkController : MonoBehaviour
+public class LinkController : MonoSingleton<LinkController>
 {
     [SerializeField] private Sprite greenSprite;
     [SerializeField] private Sprite redSprite;
@@ -17,6 +17,7 @@ public class LinkController : MonoBehaviour
     private void Update()
     {
         LowLightOtherLinks();
+        //ChangeLinkColor();
     }
 
     private void FindAllLinks()
@@ -61,15 +62,25 @@ public class LinkController : MonoBehaviour
         HighlightClosestLink(GetClosestLink());
     }
 
-    public void ChangeLinkColor()
+    //public void ChangeLinkColor()
+    //{
+    //    if (Player.Instance.IsConnected)
+    //    {
+    //    }
+    //    else
+    //    {
+    //    }
+    //}
+
+    public void SetGreenTexture()
     {
-        if (Player.Instance.IsConnected)
-        {
-            GetClosestLink().GetComponent<SpriteRenderer>().sprite = redSprite;
-        }
-        else
-        {
-            GetClosestLink().GetComponent<SpriteRenderer>().sprite = greenSprite;
-        }
+        GetClosestLink().GetComponent<SpriteRenderer>().sprite = greenSprite;
+
+    }
+
+    public void SetRedTexture()
+    {
+        GetClosestLink().GetComponent<SpriteRenderer>().sprite = redSprite;
+
     }
 }

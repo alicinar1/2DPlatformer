@@ -1,11 +1,12 @@
+using System;
 using UnityEngine;
 
+#region MoveRightClass
 public class MoveRight : ICommand
 {
     public void Execute()
     {
-        Player.Instance.IsFacingRight = true;
-
+        SetIsFacingRight();
         if (!Player.Instance.IsConnected)
         {
             Player.Instance.GetComponent<Rigidbody2D>().AddForce(Vector2.right * Player.Instance.SpeedMultiplier * Time.deltaTime, ForceMode2D.Force);
@@ -13,20 +14,26 @@ public class MoveRight : ICommand
             {
                 Player.Instance.GetComponent<Rigidbody2D>().velocity = new Vector2(Player.Instance.MaxSpeed, Player.Instance.GetComponent<Rigidbody2D>().velocity.y);
             }
-            Debug.Log("Right");
         }
-        else
+    }
+
+    private void SetIsFacingRight()
+    {
+        if (!Player.Instance.IsFacingRight)
         {
-            return;
+            Player.Instance.IsFacingRight = true;
+            MovementController.Instance.Flip();
         }
     }
 }
+#endregion
 
+#region MoveLeftClass
 public class MoveLeft : ICommand
 {
     public void Execute()
     {
-        Player.Instance.IsFacingRight = false;
+        SetIsFacingRight();
 
         if (!Player.Instance.IsConnected)
         {
@@ -34,17 +41,22 @@ public class MoveLeft : ICommand
             if (Player.Instance.GetComponent<Rigidbody2D>().velocity.x < -Player.Instance.MaxSpeed)
             {
                 Player.Instance.GetComponent<Rigidbody2D>().velocity = new Vector2(-Player.Instance.MaxSpeed, Player.Instance.GetComponent<Rigidbody2D>().velocity.y);
-
             }
-            Debug.Log("Left");
         }
-        else
+    }
+
+    private void SetIsFacingRight()
+    {
+        if (Player.Instance.IsFacingRight)
         {
-            return;
+            Player.Instance.IsFacingRight = false;
+            MovementController.Instance.Flip();
         }
     }
 }
+#endregion
 
+#region JumpClass
 public class Jump : ICommand
 {
     public void Execute()
@@ -52,7 +64,6 @@ public class Jump : ICommand
         if (Player.Instance.IsJumpable)
         {
             Player.Instance.GetComponent<Rigidbody2D>().AddForce(Vector2.up * Player.Instance.JumpMultiplier, ForceMode2D.Impulse);
-            Debug.Log("Jump");
         }
         else
         {
@@ -60,3 +71,4 @@ public class Jump : ICommand
         }
     }
 }
+#endregion

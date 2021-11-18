@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputController : MonoBehaviour
+public class InputController : MonoSingleton<InputController>
 {
-    [Header("Externals")]
-    [SerializeField] private SpringJointController springJoint;
-    [SerializeField] private MovementController movementController;
+    //[Header("Externals")]
+    //[SerializeField] private SpringJointController springJoint;
+    //[SerializeField] private MovementController movementController;
     ICommand rightArrow, leftArrow, upArrow;
 
     private void Start()
@@ -41,11 +41,11 @@ public class InputController : MonoBehaviour
         {
             if (!Player.Instance.IsConnected)
             {
-                springJoint.SetConnectedRigidBody();                
+                SpringJointController.Instance.SetConnectedRigidBody();                
             }
             else if (Player.Instance.IsConnected)
             {
-                springJoint.BreakConnection();
+                SpringJointController.Instance.BreakConnection();
             }
         }
 
