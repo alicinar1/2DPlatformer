@@ -545,3 +545,399 @@ System memory in use after: 106.4 MB.
 Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2840.
 Total: 2.459100 ms (FindLiveObjects: 0.426800 ms CreateObjectMapping: 0.143600 ms MarkObjects: 1.766400 ms  DeleteObjects: 0.120900 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001419 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.769 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.91 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2314 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 106.4 MB.
+System memory in use after: 106.5 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2844.
+Total: 2.134600 ms (FindLiveObjects: 0.233300 ms CreateObjectMapping: 0.064500 ms MarkObjects: 1.730600 ms  DeleteObjects: 0.105200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 3173.631569 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/idle outline.gif
+  artifactKey: Guid(98e4bf3532f09ec48bcab0e7aa149b4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/idle outline.gif using Guid(98e4bf3532f09ec48bcab0e7aa149b4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcf4e468814115c45cf25a01cf11dce7') in 0.095555 seconds
+  Import took 0.099974 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 541.198431 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites
+  artifactKey: Guid(e6cb57cfcb00edb4cba8914d89fc9cc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites using Guid(e6cb57cfcb00edb4cba8914d89fc9cc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa5238c867e6b3479ab1eb7babe19e10') in 0.008131 seconds
+  Import took 0.012365 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.101494 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Idle
+  artifactKey: Guid(43cdd1487221e2642be387fb012d0c31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Idle using Guid(43cdd1487221e2642be387fb012d0c31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cd872f9f63523be8a145f2a848605a7') in 0.008015 seconds
+  Import took 0.011539 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.834523 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Player SO.asset
+  artifactKey: Guid(dafae4afb4f02e24d9ebac5990559058) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Player SO.asset using Guid(dafae4afb4f02e24d9ebac5990559058) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb0901d17fb495e4537cfdd550cdcbf9') in 0.017723 seconds
+  Import took 0.021221 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.552087 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump
+  artifactKey: Guid(263d7b747e1b30945bd777833bbee241) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump using Guid(263d7b747e1b30945bd777833bbee241) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49199ae4df37e666417e72d16ecd192a') in 0.008509 seconds
+  Import took 0.012842 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.714553 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Run
+  artifactKey: Guid(224a18c7dd01ee04791533d44ccdc372) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Run using Guid(224a18c7dd01ee04791533d44ccdc372) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b820b1b9bb0a01299f9f66bfeb03b292') in 0.026950 seconds
+  Import took 0.030553 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.735285 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Grab
+  artifactKey: Guid(0783efc32a24add4ea1509c01dd4678c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Grab using Guid(0783efc32a24add4ea1509c01dd4678c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0c7c4519eb5b5b9d475c79f849cceb5') in 0.007715 seconds
+  Import took 0.011278 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.899930 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Grab/ledge grab outline.png
+  artifactKey: Guid(af91df4491d39fa46885b7bb917fee81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Grab/ledge grab outline.png using Guid(af91df4491d39fa46885b7bb917fee81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cbe5fb3381b415d5c1e2a8238d2e6aa') in 0.013784 seconds
+  Import took 0.017557 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.151381 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Grab/ledge grab outline.png
+  artifactKey: Guid(af91df4491d39fa46885b7bb917fee81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Grab/ledge grab outline.png using Guid(af91df4491d39fa46885b7bb917fee81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78c397108ec9958207a7c746ef10f117') in 0.014385 seconds
+  Import took 0.017981 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.518239 seconds.
+  path: Assets/Animations
+  artifactKey: Guid(65843a5095258804094b85334de0896a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations using Guid(65843a5095258804094b85334de0896a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b4362582a45ea7299a9604eeb8d2b39') in 0.007570 seconds
+  Import took 0.011089 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.021912 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Grab/ledge grab outline.png
+  artifactKey: Guid(af91df4491d39fa46885b7bb917fee81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Grab/ledge grab outline.png using Guid(af91df4491d39fa46885b7bb917fee81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '234d94ba926b4b6a287ba360346105a9') in 0.009852 seconds
+  Import took 0.013671 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.620027 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Idle/idle outline.png
+  artifactKey: Guid(d5e2bfc1a22badb40b5129f91be1eee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Idle/idle outline.png using Guid(d5e2bfc1a22badb40b5129f91be1eee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0cdb56afc5c919064c431f4745ee3a4') in 0.013788 seconds
+  Import took 0.017297 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.079104 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Idle/idle outline.png
+  artifactKey: Guid(d5e2bfc1a22badb40b5129f91be1eee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Idle/idle outline.png using Guid(d5e2bfc1a22badb40b5129f91be1eee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c9aa58f82cf0a6c00b033a4013fd84b') in 0.014172 seconds
+  Import took 0.018052 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.791426 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump/full jump animation outline.png
+  artifactKey: Guid(168cf8f6beb25b84cb664d917bff400b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump/full jump animation outline.png using Guid(168cf8f6beb25b84cb664d917bff400b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd233509181f08643f39130b97f010a74') in 0.013042 seconds
+  Import took 0.016597 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.532328 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump/full jump animation outline.png
+  artifactKey: Guid(168cf8f6beb25b84cb664d917bff400b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump/full jump animation outline.png using Guid(168cf8f6beb25b84cb664d917bff400b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f02ac037add117154bf4a3b7c4eb098') in 0.009024 seconds
+  Import took 0.012741 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.570850 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Run/run outline.png
+  artifactKey: Guid(621f77fd63a480547bade758916c18d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Run/run outline.png using Guid(621f77fd63a480547bade758916c18d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd4d5ffb74e8754ae7a18c4ffd5fa042') in 0.011790 seconds
+  Import took 0.015592 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.991329 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Run/run outline.png
+  artifactKey: Guid(621f77fd63a480547bade758916c18d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Run/run outline.png using Guid(621f77fd63a480547bade758916c18d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0ae84ec2c7c5612e7b7b1361d4a4f20') in 0.011637 seconds
+  Import took 0.015723 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.847409 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Grab/ledge grab outline.png
+  artifactKey: Guid(af91df4491d39fa46885b7bb917fee81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Grab/ledge grab outline.png using Guid(af91df4491d39fa46885b7bb917fee81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a312a0c205e9db6b5a3c8132daaa5b93') in 0.011387 seconds
+  Import took 0.015074 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003550 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Grab/ledge grab outline.png
+  artifactKey: Guid(af91df4491d39fa46885b7bb917fee81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Grab/ledge grab outline.png using Guid(af91df4491d39fa46885b7bb917fee81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a312a0c205e9db6b5a3c8132daaa5b93') in 0.007385 seconds
+  Import took 0.010835 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.245609 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Idle/idle outline.png
+  artifactKey: Guid(d5e2bfc1a22badb40b5129f91be1eee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Idle/idle outline.png using Guid(d5e2bfc1a22badb40b5129f91be1eee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19bf0ad0dc998cd7a1e4bd9fc03fa1c1') in 0.010148 seconds
+  Import took 0.013703 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.331047 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump/full jump animation outline.png
+  artifactKey: Guid(168cf8f6beb25b84cb664d917bff400b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump/full jump animation outline.png using Guid(168cf8f6beb25b84cb664d917bff400b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '447179d0314a318213b61333bf2b8750') in 0.010342 seconds
+  Import took 0.014056 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.010850 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Run/run outline.png
+  artifactKey: Guid(621f77fd63a480547bade758916c18d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Run/run outline.png using Guid(621f77fd63a480547bade758916c18d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8895960e626d620df307782ffd7e03d9') in 0.010302 seconds
+  Import took 0.014076 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.684642 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Grab/ledge grab outline.png
+  artifactKey: Guid(af91df4491d39fa46885b7bb917fee81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Grab/ledge grab outline.png using Guid(af91df4491d39fa46885b7bb917fee81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f08e4b39c4c7935f6cd5e9c55ec6c9d0') in 0.043070 seconds
+  Import took 0.046653 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 179.157454 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Grab/ledge grab outline.png
+  artifactKey: Guid(af91df4491d39fa46885b7bb917fee81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Grab/ledge grab outline.png using Guid(af91df4491d39fa46885b7bb917fee81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a37272fcaa006a15480321dba3b2d7e') in 0.015900 seconds
+  Import took 0.019533 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.152508 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Idle/idle outline.png
+  artifactKey: Guid(d5e2bfc1a22badb40b5129f91be1eee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Idle/idle outline.png using Guid(d5e2bfc1a22badb40b5129f91be1eee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f36e4878ee99d4f019f8cee446f2ec99') in 0.046709 seconds
+  Import took 0.050265 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.223109 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Idle/idle outline.png
+  artifactKey: Guid(d5e2bfc1a22badb40b5129f91be1eee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Idle/idle outline.png using Guid(d5e2bfc1a22badb40b5129f91be1eee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c575ebf80f02c81f93405db7dfaf495') in 0.020976 seconds
+  Import took 0.024525 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 215.190622 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump/full jump animation outline.png
+  artifactKey: Guid(168cf8f6beb25b84cb664d917bff400b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump/full jump animation outline.png using Guid(168cf8f6beb25b84cb664d917bff400b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ed038ff9a32d187fa9a1d0619740224') in 0.018502 seconds
+  Import took 0.022661 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.106861 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump/full jump animation outline.png
+  artifactKey: Guid(168cf8f6beb25b84cb664d917bff400b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump/full jump animation outline.png using Guid(168cf8f6beb25b84cb664d917bff400b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ed038ff9a32d187fa9a1d0619740224') in 0.027437 seconds
+  Import took 0.031105 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.344239 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump/full jump animation outline.png
+  artifactKey: Guid(168cf8f6beb25b84cb664d917bff400b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump/full jump animation outline.png using Guid(168cf8f6beb25b84cb664d917bff400b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c044c3fb4fd3c35b48c53e230764733') in 0.022444 seconds
+  Import took 0.026191 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.446529 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump/full jump animation outline.png
+  artifactKey: Guid(168cf8f6beb25b84cb664d917bff400b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump/full jump animation outline.png using Guid(168cf8f6beb25b84cb664d917bff400b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23e301e6fa92559f6f976b1c18e19b73') in 0.008348 seconds
+  Import took 0.011886 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.500151 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump/full jump animation outline.png
+  artifactKey: Guid(168cf8f6beb25b84cb664d917bff400b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump/full jump animation outline.png using Guid(168cf8f6beb25b84cb664d917bff400b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae4047b0d89d7dcfa6c9a503bb6e96c5') in 0.009351 seconds
+  Import took 0.012860 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 47.915171 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump/full jump animation outline.png
+  artifactKey: Guid(168cf8f6beb25b84cb664d917bff400b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump/full jump animation outline.png using Guid(168cf8f6beb25b84cb664d917bff400b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ada503099089be2b3f53de5b11b4dca6') in 0.022398 seconds
+  Import took 0.026189 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 51.493022 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump/full jump animation outline.png
+  artifactKey: Guid(168cf8f6beb25b84cb664d917bff400b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump/full jump animation outline.png using Guid(168cf8f6beb25b84cb664d917bff400b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a83ffbff8b267fc081009a0328d189b3') in 0.018847 seconds
+  Import took 0.022692 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.080513 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump/full jump animation outline.png
+  artifactKey: Guid(168cf8f6beb25b84cb664d917bff400b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump/full jump animation outline.png using Guid(168cf8f6beb25b84cb664d917bff400b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a83ffbff8b267fc081009a0328d189b3') in 0.069539 seconds
+  Import took 0.073365 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.208053 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump/full jump animation outline.png
+  artifactKey: Guid(168cf8f6beb25b84cb664d917bff400b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Jump/full jump animation outline.png using Guid(168cf8f6beb25b84cb664d917bff400b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18ebfc2f5b40f3d36c9664517d84b4e0') in 0.034607 seconds
+  Import took 0.038435 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.740860 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Run/run outline.png
+  artifactKey: Guid(621f77fd63a480547bade758916c18d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Run/run outline.png using Guid(621f77fd63a480547bade758916c18d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '275291cf8183c5f1681f2fa8b090ea67') in 0.024847 seconds
+  Import took 0.028372 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.087533 seconds.
+  path: Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Run/run outline.png
+  artifactKey: Guid(621f77fd63a480547bade758916c18d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VisualAssets/Pixel Fantasy Caves/Player/AnimationSprites/Run/run outline.png using Guid(621f77fd63a480547bade758916c18d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '275291cf8183c5f1681f2fa8b090ea67') in 0.093576 seconds
+  Import took 0.097165 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001400 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.66 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.104 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.10 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2314 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 109.4 MB.
+System memory in use after: 109.5 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2898.
+Total: 3.483100 ms (FindLiveObjects: 0.292400 ms CreateObjectMapping: 0.062200 ms MarkObjects: 2.892200 ms  DeleteObjects: 0.234900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 336.081107 seconds.
+  path: Assets/Animations/Player (1).controller
+  artifactKey: Guid(6dd61b05ff32d364e85d1235f6e4dc54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Player (1).controller using Guid(6dd61b05ff32d364e85d1235f6e4dc54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d137b4c4fee4c3c6f4a992944fd88e8') in 0.021776 seconds
+  Import took 0.025668 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001350 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.92 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.767 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.91 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2314 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 109.5 MB.
+System memory in use after: 109.5 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2902.
+Total: 2.117900 ms (FindLiveObjects: 0.235200 ms CreateObjectMapping: 0.065900 ms MarkObjects: 1.719300 ms  DeleteObjects: 0.096600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001418 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.95 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.831 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.89 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2314 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 109.5 MB.
+System memory in use after: 109.6 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2906.
+Total: 2.129200 ms (FindLiveObjects: 0.251900 ms CreateObjectMapping: 0.061000 ms MarkObjects: 1.713600 ms  DeleteObjects: 0.101800 ms)
+
