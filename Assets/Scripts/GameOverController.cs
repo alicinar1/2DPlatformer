@@ -21,8 +21,8 @@ public class GameOverController : MonoBehaviour
     public void ActieveGameOverScreen()
     {
         gameOverCanvas.gameObject.SetActive(true);
-        float a = image.color.a;
-            = Mathf.Lerp(0f, 0.7f, 0.02f);
+        //float a = image.color.a;
+        //    = Mathf.Lerp(0f, 0.7f, 0.02f);
     }
 
     public void StopInputController()
