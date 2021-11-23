@@ -64,7 +64,7 @@ public class MovementController : MonoSingleton<MovementController>
 
     public void SetHighDrag()
     {
-        playerRigidBody.drag = 0.4f;
+        playerRigidBody.drag = 0.7f;
         playerRigidBody.angularDrag = 0.05f;
     }
 

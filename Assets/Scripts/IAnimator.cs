@@ -13,6 +13,7 @@ public class RunAnimation : IAnimator
     public void StartAnimation()
     {
         Player.Instance.GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(Player.Instance.GetComponent<Rigidbody2D>().velocity.x));
+        Player.Instance.GetComponent<Animator>().SetBool("IsOnGround", Player.Instance.IsJumpable);
     }
 
     public void StopAnimation()
