@@ -7,6 +7,9 @@ public class GameOverController : MonoBehaviour
 {
     [SerializeField] private Canvas gameOverCanvas;
     [SerializeField] private Image image;
+    [SerializeField] private CanvasGroup canvasGroup;
+
+    //private float fadingDuration = 0.4f;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -15,19 +18,38 @@ public class GameOverController : MonoBehaviour
             Debug.Log("GameOver");
             ActieveGameOverScreen();
             StopInputController();
+            StopPlayerAnimation();
         }
     }
 
-    public void ActieveGameOverScreen()
+    private void ActieveGameOverScreen()
     {
         gameOverCanvas.gameObject.SetActive(true);
-        float a = image.color.a;
-        //    = Mathf.Lerp(0f, 0.7f, 0.02f);
+        image.gameObject.SetActive(true);
+        StartCoroutine(FadeOutCanvasGroup());
     }
 
-    public void StopInputController()
+    private IEnumerator FadeOutCanvasGroup()
     {
+        float counter = 0f;
 
+        while (canvasGroup.alpha < 1)
+        {
+            counter += Time.deltaTime;
+            canvasGroup.alpha = Mathf.Lerp(0f, 1f, counter);
+
+            yield return null;
+        }
+    }
+
+    private void StopInputController()
+    {
+        Player.Instance.gameObject.GetComponentInChildren<InputController>().enabled = false;
+    }
+
+    private void StopPlayerAnimation()
+    {
+        Player.Instance.GetComponent<Animator>().enabled = false;
     }
 
     //public void StopMovementController()
