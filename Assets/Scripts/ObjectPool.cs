@@ -22,7 +22,7 @@ public class ObjectPool : MonoBehaviour
         for (int i = 0; i < objectCount; i++)
         {
             GameObject obj = Instantiate(objectPrefab, Vector3.zero, Quaternion.identity, parentObject);
-            obj.SetActive(false);
+            obj.SetActive(true);
             objectsInPool.Enqueue(obj);
         }
     }

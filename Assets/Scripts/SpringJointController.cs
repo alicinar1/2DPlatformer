@@ -7,7 +7,7 @@ public class SpringJointController : MonoSingleton<SpringJointController>
     public void SetConnectedRigidBody()
     {
         Player.Instance.GetComponent<SpringJoint2D>().enabled = true;
-        Player.Instance.GetComponent<SpringJoint2D>().connectedBody =LinkController.Instance.GetClosestLink().GetComponent<Rigidbody2D>();
+        Player.Instance.GetComponent<SpringJoint2D>().connectedBody = LinkController.Instance.GetClosestLink().GetComponent<Rigidbody2D>();
         Player.Instance.IsConnected = true;
     }
 

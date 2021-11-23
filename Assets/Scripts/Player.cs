@@ -144,6 +144,8 @@ public class Player : MonoSingleton<Player>
             isFacingRight = value;
         }
     }
+
+    public int CollectedCoins { get; set; }
     #endregion
 
     #region EventMethods
