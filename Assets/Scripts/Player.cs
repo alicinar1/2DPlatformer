@@ -1,23 +1,35 @@
+using System;
 using UnityEngine;
 
 public class Player : MonoSingleton<Player>
 {
     [SerializeField] private PlayerScriptableObject playerScriptableObject;
 
+    #region Variables
     private float playerHealth;
     private float speedMultiplier;
     private float jumpMultiplier;
     private float highGravity;
     private float lowGravity;
     private float maxSpeed;
+    #endregion
 
+    #region Condition Check variables
     [Header("Condition Checks")]
     [SerializeField] private bool isConnected;
     [SerializeField] private bool isFalling;
     [SerializeField] private bool isJumpable;
     [SerializeField] private bool isOnGround;
-    [SerializeField] private bool isFacingRight;
+    [SerializeField] private bool isFacingRight = true;
+    #endregion
 
+    #region Events
+    public static event Action OnConnectedChanged;
+    public static event Action OnJumpableChanged;
+    public static event Action OnFallingChanged;
+    #endregion
+
+    #region Properties
     public float PlayerHealth
     {
         get
@@ -25,6 +37,7 @@ public class Player : MonoSingleton<Player>
             return playerHealth;
         }
     }
+
     public float SpeedMultiplier
     {
         get
@@ -32,6 +45,7 @@ public class Player : MonoSingleton<Player>
             return speedMultiplier;
         }
     }
+
     public float JumpMultiplier
     {
         get
@@ -39,6 +53,7 @@ public class Player : MonoSingleton<Player>
             return jumpMultiplier;
         }
     }
+
     public float HighGravity
     {
         get
@@ -54,6 +69,7 @@ public class Player : MonoSingleton<Player>
             return lowGravity;
         }
     }
+
     public float MaxSpeed
     {
         get
@@ -72,6 +88,7 @@ public class Player : MonoSingleton<Player>
         set
         {
             isConnected = value;
+            IsConnectedChanged();
         }
     }
 
@@ -85,6 +102,7 @@ public class Player : MonoSingleton<Player>
         set
         {
             isFalling = value;
+            IsFallingChanged();
         }
     }
 
@@ -98,6 +116,7 @@ public class Player : MonoSingleton<Player>
         set
         {
             isJumpable = value;
+            IsJumpableChanged();
         }
     }
 
@@ -113,7 +132,7 @@ public class Player : MonoSingleton<Player>
             isOnGround = value;
         }
     }
-    public bool IsFacingRight
+    public bool IsFacingRight 
     {
         get
         {
@@ -125,6 +144,25 @@ public class Player : MonoSingleton<Player>
             isFacingRight = value;
         }
     }
+    #endregion
+
+    #region EventMethods
+    private void IsConnectedChanged()
+    {
+        OnConnectedChanged?.Invoke();
+    }
+
+    private void IsFallingChanged()
+    {
+        OnFallingChanged?.Invoke();
+    }
+    
+    private void IsJumpableChanged()
+    {
+        OnJumpableChanged?.Invoke();
+    }
+    #endregion
+
 
     private void Start()
     {

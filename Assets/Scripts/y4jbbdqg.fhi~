@@ -1,0 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ObjectPool : MonoBehaviour
+{
+    [SerializeField] private GameObject objectPrefab;
+    [SerializeField] private Transform parentObject;
+    [SerializeField] private int objectCount;
+
+    Queue<GameObject> objectsInPool;
+
+    private void CreateObjects()
+    {
+        objectsInPool = new Queue<GameObject>();
+        for (int i = 0; i < objectCount; i++)
+        {
+            GameObject object = Instantiate(objectPrefab);
+        }
+    }
+
+
+}
