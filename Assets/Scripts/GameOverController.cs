@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameOverController : MonoBehaviour
 {
     [SerializeField] private Canvas gameOverCanvas;
-    [SerializeField] private Image image;
+    //[SerializeField] private Image image;
     [SerializeField] private CanvasGroup canvasGroup;
 
     //private float fadingDuration = 0.4f;
@@ -25,7 +25,7 @@ public class GameOverController : MonoBehaviour
     private void ActieveGameOverScreen()
     {
         gameOverCanvas.gameObject.SetActive(true);
-        image.gameObject.SetActive(true);
+        //image.gameObject.SetActive(true);
         StartCoroutine(FadeOutCanvasGroup());
     }
 

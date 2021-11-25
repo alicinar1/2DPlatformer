@@ -7,10 +7,10 @@ public class MoveRight : ICommand
     public void Execute()
     {
         SetIsFacingRight();
-        if (!Player.Instance.IsConnected)
+        if (!Player.Instance.IsConnected) 
         {
             Player.Instance.GetComponent<Rigidbody2D>().AddForce(Vector2.right * Player.Instance.SpeedMultiplier * Time.deltaTime, ForceMode2D.Force);
-            if (Player.Instance.GetComponent<Rigidbody2D>().velocity.x > Player.Instance.MaxSpeed)
+            if (Player.Instance.GetComponent<Rigidbody2D>().velocity.magnitude > Player.Instance.MaxSpeed)
             {
                 Player.Instance.GetComponent<Rigidbody2D>().velocity = new Vector2(Player.Instance.MaxSpeed, Player.Instance.GetComponent<Rigidbody2D>().velocity.y);
             }
