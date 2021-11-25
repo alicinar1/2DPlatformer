@@ -115,8 +115,11 @@ public class Player : MonoSingleton<Player>
 
         set
         {
+            if (isJumpable != value)
+            {
+                IsJumpableChanged();
+            }
             isJumpable = value;
-            IsJumpableChanged();
         }
     }
 

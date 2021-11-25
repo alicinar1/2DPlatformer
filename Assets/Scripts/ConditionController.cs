@@ -46,6 +46,11 @@ public class ConditionController : MonoBehaviour
         if (Player.Instance.IsJumpable)
         {
             SpringJointController.Instance.BreakConnection();
+            ParticleEffectSystem.Instance.StartJumpParticle();
+        }
+        else
+        {
+            ParticleEffectSystem.Instance.StartJumpParticle();
         }
     }
 }
