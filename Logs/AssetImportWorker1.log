@@ -3383,3 +3383,44 @@ Received Import Request.
 Start importing Assets/Prefabs/JumpParticleSystem.prefab using Guid(ca5b7629b2eaa324f9672c9c21f26bb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '472ca62a9ae6b31576df29c576afb294') in 0.033399 seconds
   Import took 0.038662 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001237 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.93 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.801 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.17 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2327 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 113.0 MB.
+System memory in use after: 113.1 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3207.
+Total: 2.216600 ms (FindLiveObjects: 0.330900 ms CreateObjectMapping: 0.069600 ms MarkObjects: 1.713000 ms  DeleteObjects: 0.102200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 112.011258 seconds.
+  path: Assets/Prefabs/JumpParticleSystem.prefab
+  artifactKey: Guid(ca5b7629b2eaa324f9672c9c21f26bb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/JumpParticleSystem.prefab using Guid(ca5b7629b2eaa324f9672c9c21f26bb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '448f38e4e52c6a8060b2b8df10806b09') in 0.023605 seconds
+  Import took 0.027983 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.097611 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(332f60599aa18ad40921567c03225617) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(332f60599aa18ad40921567c03225617) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20018388da1f7c07d62bc2b34ec4d072') in 0.084663 seconds
+  Import took 0.089699 seconds .
+
