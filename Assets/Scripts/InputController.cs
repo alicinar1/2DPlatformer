@@ -8,7 +8,7 @@ public class InputController : MonoSingleton<InputController>
     //[SerializeField] private SpringJointController springJoint;
     //[SerializeField] private MovementController movementController;
     ICommand rightArrow, leftArrow, upArrow;
-    IAnimator jump, run, grab;
+    AnimationControl jump, anim;
 
     private void Start()
     {
@@ -16,34 +16,30 @@ public class InputController : MonoSingleton<InputController>
         leftArrow = new MoveLeft();
         upArrow = new Jump();
 
-        jump = new JumpAnimation();
-        run = new RunAnimation();
-        grab = new GrabAnimation();
+        anim = new AnimationControl();
     }
 
     private void Update()
     {
         CheckInput();
+        anim.CheckVariables();
     }
 
     public void CheckInput()
     {
-        run.StartAnimation();
         if (Input.GetKey(KeyCode.RightArrow))
         {
             rightArrow.Execute();
-            run.StartAnimation();
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             leftArrow.Execute();
-            run.StartAnimation();
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             upArrow.Execute();
-            jump.StartAnimation();
+            anim.JumpAnimation();
         }
 
         if (Input.GetKeyDown("space"))
@@ -51,12 +47,11 @@ public class InputController : MonoSingleton<InputController>
             if (!Player.Instance.IsConnected)
             {
                 SpringJointController.Instance.SetConnectedRigidBody();
-                grab.StartAnimation();
+                anim.GrabAnimation();
             }
             else if (Player.Instance.IsConnected)
             {
                 SpringJointController.Instance.BreakConnection();
-                grab.StopAnimation();
             }
         }
 
