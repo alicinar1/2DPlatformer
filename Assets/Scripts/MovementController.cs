@@ -26,7 +26,7 @@ public class MovementController : MonoSingleton<MovementController>
         lowGravity = Player.Instance.LowGravity;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         CheckIsJumpable();
         CheckIsFalling();

@@ -20,6 +20,10 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene("Instructions");    
     }
+    public void LoadCredits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 
     public void LoadMenu()
     {
