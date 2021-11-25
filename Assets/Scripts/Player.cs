@@ -165,6 +165,11 @@ public class Player : MonoSingleton<Player>
     }
     #endregion
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.relativeVelocity.magnitude);
+        CameraMovement.Instance.SetTrauma(collision.relativeVelocity.magnitude);
+    }
 
     private void Start()
     {
