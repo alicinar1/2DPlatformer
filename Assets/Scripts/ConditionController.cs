@@ -47,5 +47,10 @@ public class ConditionController : MonoBehaviour
         {
             SpringJointController.Instance.BreakConnection();
         }
+        else
+        {
+            ParticleEffectController.Instance.StartJumpParticle();
+        }
+
     }
 }
