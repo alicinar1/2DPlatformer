@@ -7,10 +7,10 @@ public class MoveRight : ICommand
     public void Execute()
     {
         SetIsFacingRight();
-        if (!Player.Instance.IsConnected)
+        if (!Player.Instance.IsConnected) 
         {
             Player.Instance.GetComponent<Rigidbody2D>().AddForce(Vector2.right * Player.Instance.SpeedMultiplier * Time.deltaTime, ForceMode2D.Force);
-            if (Player.Instance.GetComponent<Rigidbody2D>().velocity.x > Player.Instance.MaxSpeed)
+            if (Player.Instance.GetComponent<Rigidbody2D>().velocity.magnitude > Player.Instance.MaxSpeed)
             {
                 Player.Instance.GetComponent<Rigidbody2D>().velocity = new Vector2(Player.Instance.MaxSpeed, Player.Instance.GetComponent<Rigidbody2D>().velocity.y);
             }
@@ -22,7 +22,10 @@ public class MoveRight : ICommand
         if (!Player.Instance.IsFacingRight)
         {
             Player.Instance.IsFacingRight = true;
-            Player.Instance.GetComponent<Rigidbody2D>().velocity = new Vector2(0.1f, Player.Instance.GetComponent<Rigidbody2D>().velocity.y); 
+            if (!Player.Instance.IsConnected)
+            {
+                Player.Instance.GetComponent<Rigidbody2D>().velocity = new Vector2(0.1f, Player.Instance.GetComponent<Rigidbody2D>().velocity.y);
+            }
             MovementController.Instance.Flip();
         }
     }
@@ -51,7 +54,10 @@ public class MoveLeft : ICommand
         if (Player.Instance.IsFacingRight)
         {
             Player.Instance.IsFacingRight = false;
-            Player.Instance.GetComponent<Rigidbody2D>().velocity = new Vector2(-0.1f, Player.Instance.GetComponent<Rigidbody2D>().velocity.y);
+            if (!Player.Instance.IsConnected)
+            {
+                Player.Instance.GetComponent<Rigidbody2D>().velocity = new Vector2(-0.1f, Player.Instance.GetComponent<Rigidbody2D>().velocity.y);
+            }
             MovementController.Instance.Flip();
         }
     }

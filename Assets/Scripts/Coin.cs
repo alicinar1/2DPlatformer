@@ -28,12 +28,13 @@ public class Coin : MonoBehaviour, ICollectable
     {
         Debug.Log("Coin");
         this.gameObject.SetActive(false);
-        CoinSpawner.Instance.CurrentCoin += 1;
+        Player.Instance.CollectedCoins += 1;
+        //CoinSpawner.Instance.CurrentCoin += 1;
     }
 
     private void OnBecameInvisible()
     {
-        CoinSpawner.Instance.CurrentCoin += 1;
+        //CoinSpawner.Instance.CurrentCoin += 1;
     }
 
 }

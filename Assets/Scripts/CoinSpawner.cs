@@ -7,7 +7,7 @@ public class CoinSpawner : MonoSingleton<CoinSpawner>
     [SerializeField] private ObjectPool coinObjectPool;
     [SerializeField] private Vector2[] positions;
 
-    [SerializeField]private int currentCoin = 10;
+    [SerializeField]private int currentCoin = 33;
 
     public int CurrentCoin { get { return currentCoin; } 
       set 
@@ -24,7 +24,7 @@ public class CoinSpawner : MonoSingleton<CoinSpawner>
 
     private void CreateCoins()
     {
-        for (int i = currentCoin - 10; i < currentCoin; i++)
+        for (int i = 0; i < currentCoin; i++)
         {
             GameObject obj = coinObjectPool.GetObjectInPool();            
             obj.SetActive(true);

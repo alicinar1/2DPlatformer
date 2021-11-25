@@ -15,6 +15,7 @@ public class MovementController : MonoSingleton<MovementController>
     private void Start()
     {
         SetPlayerProperties();
+        Flip();
     }
 
     public void SetPlayerProperties()
@@ -85,7 +86,7 @@ public class MovementController : MonoSingleton<MovementController>
         {
             Player.Instance.gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
-        Debug.Log("Flip");
+        //Debug.Log("Flip");
     }
          
 
