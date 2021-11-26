@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
+    public Animator transition;
     public void LoadNextScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        StartCoroutine(LoadLevel("DemoScene"));
+        
     }
 
     public void QuitGame()
@@ -18,20 +20,29 @@ public class MenuController : MonoBehaviour
 
     public void LoadHowToPlay() 
     {
-        SceneManager.LoadScene("Instructions");    
+        StartCoroutine(LoadLevel("Instructions"));    
     }
     public void LoadCredits()
     {
-        SceneManager.LoadScene("Credits");
+        StartCoroutine(LoadLevel("Credits"));
     }
 
     public void LoadMenu()
     {
-        SceneManager.LoadScene(0);
+        StartCoroutine(LoadLevel("StartScene"));
     }
 
     public void ReloadScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        StartCoroutine(LoadLevel("DemoScene"));
+    }
+
+    IEnumerator LoadLevel(string levelName)
+    {
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(1);
+
+        SceneManager.LoadScene(levelName);
     }
 }

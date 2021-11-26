@@ -19,6 +19,7 @@ public class GameOverController : MonoBehaviour
             ActieveGameOverScreen();
             StopInputController();
             StopPlayerAnimation();
+            SoundEffectController.Instance.GameOverSounEffect();
         }
     }
 

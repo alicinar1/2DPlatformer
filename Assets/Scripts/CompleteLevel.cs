@@ -29,6 +29,7 @@ public class CompleteLevel : MonoBehaviour
             ActieveGameOverScreen();
             StopInputController();
             StopPlayerAnimation();
+            SoundEffectController.Instance.EndGameSoundEffect();
             this.enabled = false;
         }
     }

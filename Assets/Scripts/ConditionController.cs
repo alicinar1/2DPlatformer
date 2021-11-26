@@ -51,6 +51,7 @@ public class ConditionController : MonoBehaviour
         else
         {
             ParticleEffectSystem.Instance.StartJumpParticle();
+            SoundEffectController.Instance.FallSoundEffect();
             //PlayerAnimations.Instance.JumpAnimation();
         }
     }
