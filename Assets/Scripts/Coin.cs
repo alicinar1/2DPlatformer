@@ -29,7 +29,7 @@ public class Coin : MonoBehaviour, ICollectable
         Debug.Log("Coin");
         this.gameObject.SetActive(false);
         Player.Instance.CollectedCoins += 1;
-        //CoinSpawner.Instance.CurrentCoin += 1;
+        SoundEffectController.Instance.CoinSoundEffect();
     }
 
     private void OnBecameInvisible()

@@ -72,6 +72,7 @@ public class Jump : ICommand
         if (Player.Instance.IsJumpable)
         {
             Player.Instance.GetComponent<Rigidbody2D>().AddForce(Vector2.up * Player.Instance.JumpMultiplier, ForceMode2D.Impulse);
+            SoundEffectController.Instance.JumpSoundEffect();
         }
         else
         {

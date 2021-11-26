@@ -8,7 +8,7 @@ public class InputController : MonoSingleton<InputController>
     //[SerializeField] private SpringJointController springJoint;
     //[SerializeField] private MovementController movementController;
     ICommand rightArrow, leftArrow, upArrow;
-    AnimationControl jump, anim;
+    AnimationControl anim;
 
     private void Start()
     {
